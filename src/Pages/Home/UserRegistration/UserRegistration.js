@@ -8,6 +8,7 @@ const UserRegistration = () => {
     const { user } = useContext(AuthContext)
     const imageHostKey = process.env.REACT_APP_imgbb_key;
     const navigate = useNavigate()
+    const data = new Date()
     const handleSubmit = (e) => {
         e.preventDefault()
         const name = user?.displayName || 'Unregister'
@@ -29,7 +30,8 @@ const UserRegistration = () => {
                         userName: name,
                         email,
                         message,
-                        image: imgData.data.url
+                        image: imgData.data.url,
+                        time: data.getTime()
                     }
                     console.log(addPost);
                     fetch('http://localhost:5000/addPost', {
