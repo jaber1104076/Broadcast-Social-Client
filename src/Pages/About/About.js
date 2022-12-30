@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../Hooks/useTitle';
 import AboutModal from '../AboutModal/AboutModal';
 
 const About = () => {
     const [about, setAbout] = useState({})
     const [click, setClick] = useState(null)
     const [refresh, setRefresh] = useState(false)
+    useTitle('About')
     useEffect(() => {
         fetch('https://social-media-platform-server-five.vercel.app/about')
             .then(res => res.json())

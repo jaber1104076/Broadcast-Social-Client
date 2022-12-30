@@ -1,9 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import useTitle from '../../Hooks/useTitle';
 import SkeletonSpinner from '../Shared/Spinner/SkeletonSpinner';
 import SinglePost from './SinglePost';
 
 const Media = () => {
+    useTitle('Media')
     const { data: posts, isLoading, refetch = [] } = useQuery({
         queryKey: ['myMedia'],
         queryFn: async () => {

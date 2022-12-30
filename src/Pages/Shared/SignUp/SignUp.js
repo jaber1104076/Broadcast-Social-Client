@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../Hooks/useTitle';
 
 const SignUp = () => {
     const { createUser, updateUser, googleSignIn } = useContext(AuthContext)
     const imageHostKey = process.env.REACT_APP_imgbb_key;
     const navigate = useNavigate()
+    useTitle('Sign Up')
     const handleSignUp = (e) => {
         e.preventDefault()
         const form = e.target;
