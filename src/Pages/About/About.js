@@ -6,7 +6,7 @@ const About = () => {
     const [click, setClick] = useState(null)
     const [refresh, setRefresh] = useState(false)
     useEffect(() => {
-        fetch('http://localhost:5000/about')
+        fetch('https://social-media-platform-server-five.vercel.app/about')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -19,7 +19,7 @@ const About = () => {
             <section className="bg-gray-600 text-gray-100">
                 <div className="container max-w-5xl px-4 py-12 mx-auto">
                     <div className='flex justify-end'>
-                        <label onClick={() => setClick(about)} htmlFor="booking-modal" className='btn btn-info bg-violet-500'>Edit</label>
+                        <label onClick={() => setClick(about)} htmlFor="booking-modal" className="hover:text-gray-100 bg-gradient-to-r from-[#00B4DB] to-[#0083B0] text-white px-5 py-3 rounded-md cursor-pointer">Edit</label>
                     </div>
                     <div className="grid gap-4 mx-4 sm:grid-cols-12">
                         <div className="col-span-12 sm:col-span-3">

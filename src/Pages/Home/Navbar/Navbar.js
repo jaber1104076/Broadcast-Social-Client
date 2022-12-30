@@ -13,9 +13,9 @@ const Navbar = () => {
     }
     const navMenu =
         <React.Fragment>
-            <li><Link to='/media'>Media</Link></li>
-            <li><Link to='/message'>Message</Link></li>
-            <li><Link to='/about'>About</Link></li>
+            <li><Link to='/media' className='text-[#0083B0] font-medium text-lg'>Media</Link></li>
+            <li><Link to='/message' className='text-[#0083B0] font-medium text-lg'>Message</Link></li>
+            <li><Link to='/about' className='text-[#0083B0] font-medium text-lg'>About</Link></li>
         </React.Fragment>
     return (
         <div>
@@ -29,7 +29,7 @@ const Navbar = () => {
                             {navMenu}
                         </ul>
                     </div>
-                    <Link to='/' className="ml-4 normal-case text-xl">Broadcast Socials</Link>
+                    <Link to='/' className="ml-4 normal-case text-xl text-[#0083B0] font-medium">Broadcast Socials</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -40,12 +40,12 @@ const Navbar = () => {
                     {
                         user?.uid ?
                             <>
-                                <Link onClick={handleSignOut} to='/signup' className="btn btn-outline btn-accent mr-3">Sign out</Link>
+                                <Link onClick={handleSignOut} to='/signup' className="hover:text-gray-100 bg-gradient-to-r from-[#00B4DB] to-[#0083B0] text-white px-5 py-3 rounded-md">Sign out</Link>
                             </>
                             :
                             <>
-                                <Link to='/signup' className="btn btn-outline btn-success mr-3">Sign UP</Link>
-                                <Link to='/login' className="btn btn-outline btn-info mr-2">Login</Link>
+                                <Link to='/signup' className="hover:text-gray-100 bg-gradient-to-r from-[#00B4DB] to-[#0083B0] text-white px-5 py-3 rounded-md mr-2">Sign UP</Link>
+                                <Link to='/login' className="hover:text-gray-100 bg-gradient-to-r from-[#00B4DB] to-[#0083B0] text-white px-5 py-3 rounded-md">Login</Link>
                             </>
                     }
 

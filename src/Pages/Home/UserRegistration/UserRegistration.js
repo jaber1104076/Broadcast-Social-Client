@@ -34,7 +34,7 @@ const UserRegistration = () => {
                         time: data.getTime()
                     }
                     console.log(addPost);
-                    fetch('http://localhost:5000/addPost', {
+                    fetch('https://social-media-platform-server-five.vercel.app/addPost', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json'

@@ -22,7 +22,7 @@ const AboutModal = ({ about, setClick, setRefresh, refresh }) => {
             address
         }
         console.log(about);
-        fetch(`http://localhost:5000/about/${_id}`, {
+        fetch(`https://social-media-platform-server-five.vercel.app/about/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
