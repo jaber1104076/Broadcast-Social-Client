@@ -11,7 +11,7 @@ const DetailPost = () => {
             <div>
                 <div className="flex flex-col mx-10 p-6 space-y-6 overflow-hidden rounded-lg shadow-md bg-gray-500 text-gray-100">
                     <div className="flex space-x-4">
-                        <img alt="" src="https://source.unsplash.com/100x100/?portrait" className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
+                        <img alt="" src="" className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500" />
                         <div className="flex flex-col space-y-1">
                             <Link rel="noopener noreferrer" href="#" className="text-sm font-semibold">{userName}</Link>
                         </div>
